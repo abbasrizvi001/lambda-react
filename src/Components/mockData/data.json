@@ -1,0 +1,45 @@
+{
+    "Genre":{
+        "Comedy":"2",
+        "Anime":"2",
+        "Classics":"7",
+        "Action":"4",
+        "Crime":"5",
+        "Horror":"6",
+        "Fantasy":"7",
+        "Thriller":"10",
+        "Drama":"11",
+        "Kids":"15",
+        "Cartoon":"18",
+        "international":"20"
+
+    },
+    "Service":{
+        "Netflix":"53",
+        "Amazon":"21",
+        "Hulu":"12",
+        "Disney":"31"
+    },
+    "HoursWatched":"107",
+    "monthsWatched":{
+        "Jan":"42",
+        "Feb":"47",
+        "Mar":"55",
+        "Apr":"153",
+        "May":"197",
+        "Jun":"125",
+        "Jul":"148",
+        "Aug":"99",
+        "Sep":"85",
+        "Oct":"82",
+        "Nov":"81",
+        "Dec":"125"
+    },
+    "mostSeenLastYear":{
+        "Community":"93",
+        "Office":"105",
+        "Friends":"86",
+        "ParksAndRec":"79",
+        "ArrestedDevelopment":"90"
+    }
+}
