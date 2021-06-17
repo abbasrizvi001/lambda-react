@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import ButtonList from "../Common/buttonList";
 import CheckIcon from "@material-ui/icons/Check";
 import AddIcon from "@material-ui/icons/Add";
-import CssBaseline from "@material-ui/core/CssBaseline";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -28,43 +29,6 @@ const useStyles = makeStyles((theme) => ({
 export default function ServicesGuide() {
   const classes = useStyles();
   const servicesList = ["Netflix", "Amazon Prime", "Hulu", "Disney+"];
-  const [selectedService, setSelectedService] = useState([]);
-  const [isChecked, setIsChecked] = useState(false);
-
-  function ButtonSelected(service) {
-    if (selectedService.includes(service)) {
-      const uncheckedService = selectedService.filter((e) => e !== service);
-      setSelectedService(uncheckedService);
-      setIsChecked(false);
-    } else {
-      const newSelected = [...selectedService, service];
-      setSelectedService(newSelected);
-      setIsChecked(true);
-    }
-  }
-
-  const defaultButtonList = servicesList.map((service, index) => (
-    <Grid item xs={12}>
-      <Button
-        key={service + index}
-        id={service}
-        onClick={() => ButtonSelected(service)}
-        fullWidth
-        variant="contained"
-        color={isChecked ? "secondary" : "primary"}
-        className={classes.Button}
-        endIcon={
-          isChecked ? (
-            <CheckIcon className={classes.icon} />
-          ) : (
-            <AddIcon className={classes.icon} />
-          )
-        }
-      >
-        {service}
-      </Button>
-    </Grid>
-  ));
 
   return (
     <Container component="main" maxWidth="sm">
@@ -78,8 +42,7 @@ export default function ServicesGuide() {
           below
         </Typography>
         <Grid container spacing={2} justify="center">
-          {defaultButtonList}
-          <pre> {selectedService} </pre>
+          <ButtonList listToIterate={servicesList} endIconButton1={<CheckIcon />} endIconButton2={<AddIcon />} />
           <Grid item xs={12}>
             <Button
               fullWidth

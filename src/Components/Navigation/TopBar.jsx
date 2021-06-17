@@ -17,14 +17,14 @@ import {
   filmGenres,
   tvGenres,
 } from "../../Utils/optionsConfig";
-import MenuButton from "../Common/menuButton";
+import MenuIconButton from "../Common/menuIconButton";
 import TextButton from "../Common/textButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
+  MenuIconButton: {
     marginRight: theme.spacing(2),
   },
   buttons: {},
@@ -79,7 +79,7 @@ export default function SearchAppBar() {
     <div className={classes.root}>
       <AppBar position="relative">
         <Toolbar>
-          <div className={classes.menuButton}>
+          <div className={classes.MenuIconButton}>
             <Button color="inherit" href="/home">
               <Typography variant="h4" noWrap>
                 Lambda
@@ -99,7 +99,7 @@ export default function SearchAppBar() {
               <TextButton textForButton={"SERIES"} items={tvGenres} className={classes.dropDownButton}/>
             </Grid>
           </Grid>
-          <MenuButton iconType={AccountCircleIcon} items={profileOptions} />
+          <MenuIconButton iconType={AccountCircleIcon} items={profileOptions} />
           <IconButton color="inherit" href="/services">
             <CreateIcon />
           </IconButton>

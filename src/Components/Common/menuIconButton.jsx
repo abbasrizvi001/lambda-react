@@ -3,7 +3,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";
 
-class MenuButton extends React.Component {
+class MenuIconButton extends React.Component {
   state = {
     anchorEl: null,
   };
@@ -59,4 +59,4 @@ class MenuButton extends React.Component {
   }
 }
 
-export default MenuButton;
+export default MenuIconButton;
